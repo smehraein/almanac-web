@@ -9,6 +9,9 @@ web-server:
   volumes:
    - .:/usr/src/app
   command: npm run dev
+  environment:
+    - MAILGUN_KEY=MAILGUN_KEY
+    - MAILGUN_DOMAIN=MAILGUN_DOMAIN
 
 app-service:
   image: almanac/app-service:dev
